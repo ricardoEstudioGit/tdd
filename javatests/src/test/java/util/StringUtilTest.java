@@ -1,18 +1,16 @@
 package util;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class StringUtilTest {
 
-    public static void main(String[] args) {
-
+    @Test
+    public void testRepeat() {
         // Sin error
         assertEquals(StringUtil.repeat("prueba", 2), "pruebaprueba");
-
         // Con error------------------
-
-        //assertEquals(StringUtil.repeat("prueba", 2), "pruebaprueba");
-
-
-
+        Assert.assertEquals(StringUtil.repeat("prueba", 2), "pruebaprueba");
     }
 
     private static void assertEquals (String actual, String esperado) {
