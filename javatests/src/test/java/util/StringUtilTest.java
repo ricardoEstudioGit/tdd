@@ -5,22 +5,20 @@ public class StringUtilTest {
     public static void main(String[] args) {
 
         // Sin error
+        assertEquals(StringUtil.repeat("prueba", 2), "pruebaprueba");
 
-        String result = StringUtil.repeat("prueba", 2);
-        System.out.println(result);
-        if (result.equals("prueba prueba")){
-            System.out.println("ok");
+        // Con error------------------
+
+        //assertEquals(StringUtil.repeat("prueba", 2), "pruebaprueba");
+
+
+
+    }
+
+    private static void assertEquals (String actual, String esperado) {
+        if (!actual.equals(esperado)) {
+            throw new RuntimeException(actual + " no es igual al valor esperado " + esperado);
         }
-
-        // Con error
-
-        String result2 = StringUtil.repeat("prueba", 2);
-        System.out.println(result2);
-        if (!result2.equals("prueba prueba")){
-            System.out.println("error");
-        }
-
-
     }
 
 }
