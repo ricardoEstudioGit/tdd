@@ -26,15 +26,9 @@ public class PasswordUtilTest {
     }
     /*
       mayor a 11 digitos
-      debe de tener letras, numero, simbolos
      */
     @Test
     public void passwordStrong() {
         assertEquals(STRONG, PasswordUtil.assessPassword("12345!asdada7891011121314"));
     }
-    @Test
-    public void passwordNoValido() {
-        assertEquals(NO_VALIDA, PasswordUtil.assessPassword("123456&&asdada7891011121314"));
-    }
-
 }
