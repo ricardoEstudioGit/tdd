@@ -14,7 +14,7 @@ public class PasswordUtilTest {
         assertEquals(WEAK, PasswordUtil.assessPassword("12345!a"));
     }
     /*
-      mayor o igual a 8 y menor a o igual 11 digitos
+      mayor o igual a 8 y menor o igual 11 digitos
       contiene letras y numeros
      */
     @Test
@@ -30,9 +30,7 @@ public class PasswordUtilTest {
      */
     @Test
     public void passwordStrong() {
-
-        assertEquals(STRONG, PasswordUtil.assessPassword("12345asdada7891011121314"));
-
+        assertEquals(STRONG, PasswordUtil.assessPassword("12345!asdada7891011121314"));
     }
     @Test
     public void passwordNoValido() {

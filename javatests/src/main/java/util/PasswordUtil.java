@@ -14,7 +14,7 @@ public class PasswordUtil {
         if (password.matches("[a-zA-Z0-9]+") && (password.length() >= 8 && password.length() <= 11)) {
             return SecurityLevel.MEDIUM;
         }
-        if (password.length() > 11 && password.matches("[a-zA-Z0-9]+")) {
+        if (password.length() > 11 && password.matches("[a-zA-Z0-9!@#$%&*()_+=|<>?{}\\[\\]~-]+")) {
             return SecurityLevel.STRONG;
         }
         return SecurityLevel.NO_VALIDA;
