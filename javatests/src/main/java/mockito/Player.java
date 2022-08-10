@@ -13,7 +13,7 @@ public class Player {
     public boolean play(){
         int numeroDado = dado.roll();
         System.out.println(numeroDado);
-        return numeroDado > numeroMinimoGanador;
+        return numeroDado == numeroMinimoGanador;
     }
 
 }
